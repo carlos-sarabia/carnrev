@@ -14,7 +14,7 @@ Urocyon_cinereoargenteus	Vulpes_zerda	0.196
 Urocyon_cinereoargenteus	Vulpes_vulpes	0.159
 ```
 
-We extract species of interest from each table with a custom-made:
+We extract species of interest from each table with a custom-made script:
 
 ```
 words=("Urocyon_cinereoargenteus" "Nyctereutes_procyonoides" "Otocyon_megalotis" "Vulpes_zerda" "Vulpes_vulpes" "Vulpes_lagopus" "Speothos_venaticus" "Chrysocyon_brachyurus" "Lycaon_pictus" "Canis_latrans" "Canis_aureus" "Lupulella_mesomelas" "Cuon_alpinus" "Lupulella_adusta")
@@ -27,7 +27,17 @@ done
 echo -e "carn1\tcarn2\tcytb\tmitogenome" > header
 
 cut -f3 2021_Hassanin.comps.red.txt | paste 1995_Geffen.comps.comp.txt - | cat header - > table_comp.cytb.mito.csv
+```
+The result:
 
+```
+head -5 table_comp.cytb.mito.csv 
+carn1	carn2	cytb	mitogenome
+Urocyon_cinereoargenteus	Nyctereutes_procyonoides	0.179	0.14569448
+Urocyon_cinereoargenteus	Otocyon_megalotis	0.181	0.14570458
+Urocyon_cinereoargenteus	Vulpes_lagopus	0.214	0.1440113
+Urocyon_cinereoargenteus	Vulpes_zerda	0.196	0.14838754
+Urocyon_cinereoargenteus	Vulpes_vulpes	0.159	0.14454992
 ```
 
 
