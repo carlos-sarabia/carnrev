@@ -6,7 +6,7 @@
 We extracted Table 2 from Geffen et al (1996) and tables from the supplementary material of Hassanin et al. (2021) and have all carnivore species in the format `Genus_species` along with their genetic distances. For example:
 
  ```
-head cytb_mito/1995_Geffen.comps.comp.txt
+head cytb_mito/1996_Geffen.comps.comp.txt
 Urocyon_cinereoargenteus	Nyctereutes_procyonoides	0.179
 Urocyon_cinereoargenteus	Otocyon_megalotis	0.181
 Urocyon_cinereoargenteus	Vulpes_lagopus	0.214
@@ -14,13 +14,20 @@ Urocyon_cinereoargenteus	Vulpes_zerda	0.196
 Urocyon_cinereoargenteus	Vulpes_vulpes	0.159
 ```
 
+We extract species of interest from each table with a custom-made:
 
-```html
+```
 words=("Urocyon_cinereoargenteus" "Nyctereutes_procyonoides" "Otocyon_megalotis" "Vulpes_zerda" "Vulpes_vulpes" "Vulpes_lagopus" "Speothos_venaticus" "Chrysocyon_brachyurus" "Lycaon_pictus" "Canis_latrans" "Canis_aureus" "Lupulella_mesomelas" "Cuon_alpinus" "Lupulella_adusta")
 for ((i=0; i<${#words[@]}; i++)); do
 word1="${words[i]}"
-grep $word1 1995_Geffen.comps.comp.txt
+grep $word1 1996_Geffen.comps.txt > 1996_Geffen.comps.red.txt
+grep $word1 2021_Hassanin.comps.txt > grep $word1 2021_Hassanin.comps.red.txt
 done
+
+echo -e "carn1\tcarn2\tcytb\tmitogenome" > header
+
+cut -f3 2021_Hassanin.comps.red.txt | paste 1995_Geffen.comps.comp.txt - | cat header - > table_comp.cytb.mito.csv
+
 ```
 
 
