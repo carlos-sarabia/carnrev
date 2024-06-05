@@ -14,7 +14,7 @@ Urocyon_cinereoargenteus	Vulpes_zerda	0.196
 Urocyon_cinereoargenteus	Vulpes_vulpes	0.159
 ```
 
-We extract carnivore species from this study from each table with a custom-made script:
+We extract carnivore species from this study from each table with a simple bash command:
 
 ```
 words=("Urocyon_cinereoargenteus" "Nyctereutes_procyonoides" "Otocyon_megalotis" "Vulpes_zerda" "Vulpes_vulpes" "Vulpes_lagopus" "Speothos_venaticus" "Chrysocyon_brachyurus" "Lycaon_pictus" "Canis_latrans" "Canis_aureus" "Lupulella_mesomelas" "Cuon_alpinus" "Lupulella_adusta")
