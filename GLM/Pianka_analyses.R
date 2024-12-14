@@ -13,7 +13,7 @@ library(psych) ## for table summary statistics
 
 
 ##### Data #####
-setwd("C:/Users/Javier/Desktop/Work/Emilio/NDVI_Carnivores") #We put the path of the folder in which we are going to work
+setwd("/path/to/repository") #We put the path of the folder in which we are going to work
 data <- read_excel("Analysis_table.xlsx")
 
 # Variables to standardize
