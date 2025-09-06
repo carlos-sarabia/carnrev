@@ -4,7 +4,7 @@
 ## types of species (1: medium-sized canids, 2: small-sized felids, 3: foxes of the Vulpini tribe, 4:
 ## mustelids and herpestids). 
 
-## Input file: https://github.com/cdomsar/Pianka/blob/main/pianka-210901-reduced.csv
+## Input file: https://github.com/cdomsar/Pianka/blob/main/pianka-reduced.csv
 ## Output file: https://github.com/cdomsar/Pianka/blob/main/results.csv
 #####################################################################################################
 
